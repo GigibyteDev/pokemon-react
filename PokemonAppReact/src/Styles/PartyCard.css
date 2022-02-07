@@ -1,0 +1,97 @@
+.party-card {
+  width: 280px;
+  height: 350px;
+  margin: 10px;
+  background-color: #3a3b3c;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.normal-border {
+  border: 3px solid #18191a;
+}
+
+.gradient-border {
+  --border-width: 3px;
+  position: relative;
+  display: flex;
+  border-radius: var(--border-width);
+}
+.gradient-border::after {
+  position: absolute;
+  content: "";
+  top: calc(-1 * var(--border-width));
+  left: calc(-1 * var(--border-width));
+  z-index: -1;
+  width: calc(100% + var(--border-width) * 2);
+  height: calc(100% + var(--border-width) * 2);
+  background: linear-gradient(
+    60deg,
+    #5f86f2,
+    #a65ff2,
+    #f25fd0,
+    #f25f61,
+    #f2cb5f,
+    #abf25f,
+    #5ff281,
+    #5ff2f0
+  );
+  background-size: 300% 300%;
+  background-position: 0 50%;
+  border-radius: calc(2 * var(--border-width));
+  animation: moveGradient 4s alternate infinite;
+}
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.party-card-header-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.party-card-gender-icon {
+  padding-left: 30px;
+  width: 33%;
+}
+
+.party-card-header-name {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 10px;
+  color: #18191a;
+  font-weight: bold;
+  background-color: grey;
+  border-top: 3px solid #18191a;
+  border-bottom: 3px solid #18191a;
+}
+
+.party-card-image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.party-card-image {
+  width: 80%;
+}
+
+.party-card-header-name-text {
+  font-size: x-large;
+}
+
+.party-card-type-icons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -16px;
+  margin-right: 8px;
+  width: 33%;
+}

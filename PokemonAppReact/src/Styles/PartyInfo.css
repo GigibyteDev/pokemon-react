@@ -1,0 +1,13 @@
+.party-info-wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  text-transform: capitalize;
+  color: #3a3b3c;
+}
+
+.party-info-pokemon-name {
+  font-size: xx-large;
+  font-weight: bold;
+}

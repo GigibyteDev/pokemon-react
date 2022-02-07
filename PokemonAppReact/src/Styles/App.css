@@ -1,0 +1,19 @@
+body {
+  background-color: #18191a;
+  color: #b0b3b8;
+}
+
+button {
+  background-color: #0059ff;
+  color: #e4e6eb;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+input {
+  background-color: #3a3b3c;
+  color: #e4e6eb;
+  text-align: center;
+  border: 1px solid black;
+  text-transform: capitalize;
+}

@@ -1,0 +1,49 @@
+.pokemon-form {
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  padding-top: 1%;
+  user-select: none;
+}
+
+.pokemon-form-child {
+  margin: 15px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.form-header {
+  display: flex;
+  flex-direction: row;
+}
+
+.response-icon {
+  padding-top: 20px;
+}
+
+.rotate-icon {
+  -webkit-animation: spin 4s linear infinite;
+  -moz-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
