@@ -164,7 +164,11 @@ const PokemonData = (props: PokemonDataI) => {
       props.showNotification('error', 'Party Capacity Reached');
     }
     else if (pokemon.Pokemon){
-      dispatch(AddPartyPokemonAction(pokemon.Pokemon, gender, isShiny))
+      let newId: number = 0;
+      if (party.PartyPokemon.length !== 0){
+        newId = Math.max(...party.PartyPokemon.map(a => a.PokemonData.id)) + 1
+      }
+      dispatch(AddPartyPokemonAction({...pokemon.Pokemon, id: newId}, gender, isShiny))
       props.showNotification('success', 'Pokemon Added Successfully');
     }
     else{

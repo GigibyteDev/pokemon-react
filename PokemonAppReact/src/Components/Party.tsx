@@ -7,7 +7,12 @@ import { PartyPokemonType } from '../Redux/Actions/PartyPokemonTypes';
 
 import $ from 'jquery';
 import PartyInfo from './PartyInfo';
-const Party = () => {
+
+interface IPartyProps {
+  showNotification: Function
+}
+
+const Party = (props: IPartyProps) => {
   const party = useSelector((state: RootDispatchType) => state.Party);
   const [infoExpanded, setInfoExpanded] = useState<boolean>(false);
   const [selectedPokemon, setSelectedPokemon] = useState<PartyPokemonType>(party.PartyPokemon[0])
@@ -46,8 +51,8 @@ const Party = () => {
               }
             </div>
           </div>
-          <div className="party-card-info-wrapper" onClick={handleInfoClose}>
-            <PartyInfo Pokemon={selectedPokemon}/>
+          <div className="party-card-info-wrapper">
+            <PartyInfo Pokemon={selectedPokemon} OnInfoClose={handleInfoClose} ShowNotification={props.showNotification}/>
           </div> 
         </div>
       ) : (

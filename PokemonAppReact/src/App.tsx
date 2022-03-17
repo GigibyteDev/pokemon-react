@@ -26,7 +26,7 @@ function App() {
       <Notification type={notificationType} message={notificationText} />
       <Routes>
         <Route path="/"  element={<PokemonForm showNotification={handleShowNotification}/>} />
-        <Route path="/party" element={<Party />} />
+        <Route path="/party" element={<Party showNotification={handleShowNotification} />} />
       </Routes>
     </div>
   );
